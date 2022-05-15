@@ -23,7 +23,7 @@ function Header() {
         </Menu>
         <RightMenu>
             <a href="#"> Shop</a>
-            <a href="#"> account</a>
+            <a href="#"> Tesla account</a>
             <CustomMenu onClick={() => setburgerStatus(true)}/>
         </RightMenu>
 
@@ -116,6 +116,7 @@ const BurgerNav = styled.div`
 
         a {
             font-weight: 600;
+            text-transform: uppercase;
         }
     }
 `

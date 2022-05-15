@@ -2,7 +2,7 @@ import {createSlice} from "@reduxjs/toolkit";
 //  slice is just like a slice of a pizza
 
 const initialState = {
-    cars: ["Model X", "Model 3", "Model S", "Model Y"]
+    cars: ["Model X", "Model 3", "Model S", "Model Y", "Solar Roof", "Solar Panel"]
 }
 
 const CarSlice = createSlice({
