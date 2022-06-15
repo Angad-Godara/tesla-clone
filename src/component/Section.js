@@ -5,7 +5,7 @@ import Fade from 'react-reveal/Fade';
 function Section({ title, description, backgroundImg, leftBtnText, rightBtnText }) {
     return (
             <Wrap bgImage={backgroundImg}>
-                <Fade bottom>
+                <Fade top>
                     <ItemText>
                         <h1>{title}</h1>
                         <p>{description}</p>
@@ -14,15 +14,19 @@ function Section({ title, description, backgroundImg, leftBtnText, rightBtnText 
                 <Buttons>
                     <Fade bottom>
                         <ButtonGroup>
+                            <Fade left>
                             <LeftButton>
                                 {leftBtnText}
                             </LeftButton>
+                            </Fade>
 
+                            <Fade right>
                             {rightBtnText &&
                                 <RightButton>
                                     {rightBtnText}
                                 </RightButton>
                             }
+                            </Fade>
                         </ButtonGroup>
                     </Fade>
                     <DownArrow src="/images/down-arrow.svg" />
@@ -39,7 +43,6 @@ const Wrap = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('/images/model-s.jpg');
     display: flex;
     flex-direction: column;
     justify-content: space-between;
