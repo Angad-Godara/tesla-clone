@@ -2,36 +2,36 @@ import React from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
 
-function Section({title, description, backgroundImg, leftBtnText, rightBtnText}) {
-  return (
-    <Wrap bgImage={backgroundImg}>
-        <Fade bottom>
-            <ItemText>
-                <h1>{title}</h1>
-                <p>{description}</p>
-            </ItemText>
-        </Fade>
-        <Buttons>
-            <Fade bottom>
-            <ButtonGroup>
-                <LeftButton>
-                    {leftBtnText}
-                </LeftButton>
+function Section({ title, description, backgroundImg, leftBtnText, rightBtnText }) {
+    return (
+            <Wrap bgImage={backgroundImg}>
+                <Fade bottom>
+                    <ItemText>
+                        <h1>{title}</h1>
+                        <p>{description}</p>
+                    </ItemText>
+                </Fade>
+                <Buttons>
+                    <Fade bottom>
+                        <ButtonGroup>
+                            <LeftButton>
+                                {leftBtnText}
+                            </LeftButton>
 
-                { rightBtnText && 
-                    <RightButton>
-                        {rightBtnText}
-                    </RightButton>
-                }
-            </ButtonGroup>
-            </Fade>
-            <DownArrow src="/images/down-arrow.svg" />
-        </Buttons>
-    </Wrap>
-  )
+                            {rightBtnText &&
+                                <RightButton>
+                                    {rightBtnText}
+                                </RightButton>
+                            }
+                        </ButtonGroup>
+                    </Fade>
+                    <DownArrow src="/images/down-arrow.svg" />
+                </Buttons>
+            </Wrap>
+    )
 }
 
-export default Section
+export default Section;
 
 const Wrap = styled.div`
     width: 100vw;
